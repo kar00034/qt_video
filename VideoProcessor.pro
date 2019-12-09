@@ -17,4 +17,9 @@ HEADERS += \
 FORMS += \
         mainwindow.ui
 
-include(c:/opencv.pri)
+INCLUDEPATH += /usr/local/include/opencv4
+LIBS += -L/usr/local/lib -L/usr/arm-linux-gnueabi/lib -lopencv_core -lopencv_imgcodecs -lopencv_highgui -lopencv_imgproc -lopencv_videoio -lopencv_objdetect -lwiringPi
+INCLUDEPATH += /usr/arm-linux-gnueabi/include
+
+target.path = /home/pi/blackbox
+INSTALLS += target
